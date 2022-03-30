@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div.container{
+            display: grid;
+            background-color: coral;
+            grid-template-columns: repeat(3, minmax(100px, 250px)); /* minmax > 최소 최대값*/
+            grid-template-rows: repeat(2, minmax(100px, auto));
+            margin-bottom: 50px;
+        }
+
+        div.item{
+            border: solid 2px #333;
+            background-color: aliceblue;
+        }
+
+        div.container02{
+            display: grid;
+            background-color: aqua;
+            grid-template-columns: minmax(100px, 250px) minmax(500px, 1fr);
+            height: 500px;
+        }
+
+        div.nav{
+            background-color: rgb(25, 63, 75);
+            margin-right: 1rem;
+        }
+
+        div.content{
+            background-color: rgb(211, 91, 157);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">item01</div>
+        <div class="item">item02</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint quibusdam quidem, magni deleniti, veniam porro iure sed quae voluptas earum quos natus blanditiis explicabo? Nostrum blanditiis temporibus rerum. Repellendus.</div>
+        <div class="item">item04</div>
+        <div class="item">item05</div>
+        <div class="item">item06</div>
+        <div class="item">item07</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero necessitatibus saepe debitis architecto assumenda unde, harum aspernatur molestiae maxime ex. Nemo sapiente minima esse maiores nisi voluptates. Mollitia, molestiae voluptatibus!</div>
+        <div class="item">item09</div>
+        <div class="item">item10</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nulla cum placeat ut voluptatum porro? Sunt, facilis ut ea vel quasi repellendus aliquam delectus numquam unde magni molestiae dolorem error.</div>
+        <div class="item">item12</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem maxime nulla non ex beatae? Earum veniam dicta harum dolores, aliquid consequuntur at reiciendis est fuga odio error quam placeat?</div>
+        <div class="item">item14</div>
+    </div>
+
+    <div class="container02">
+        <div class="nav">nav</div>
+        <div class="content">content</div>
+    </div>
+    
+</body>
+</html>

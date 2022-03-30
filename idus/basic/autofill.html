@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*
+        autofill 
+        column의 개수를 정하지 않고 사이즈로만 할 때 사이즈가 허용하는 만큼 최대한 셀을 채우는 방식 
+        fill = 영역보다 들어가는 갯수가 모자를 경우 모자란 영역을 자동으로 비움 
+        fit = 영역보다 들어가는 갯수가 모자를 경우 모자란 영역을 자동으로 채운다. 
+        
+        */
+
+        div.container{
+            display: grid;
+            background-color: coral;
+            grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+        }
+
+        div.item{
+            border: solid 1px #333;
+            background-color: aliceblue;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item01</div>
+        <div class="item">item02</div>
+        <div class="item">item03</div>
+        <div class="item">item04</div>
+    </div>
+</body>
+</html>

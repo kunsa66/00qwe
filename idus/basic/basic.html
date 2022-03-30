@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout basic</title>
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*
+        1. container = wrapper = gridbox  > 전체를 감싸고 있는 박스요소 grid layout이 적용되는 전체 영역 
+        2. item > 그리드가 선언되엉있는 영역의 자식요소들 (실제로 영향을 받는 컨텐츠)
+        3. line track > 가로(column) 세로(row)를 의미하며 컨텐츠가 배치되는 경로
+        4. cell > grid를 구분하는 선 
+        5. grid-line > grid 셀을 구분하는 선 
+        6. grid-number > grid 라인에 부여되는 번호. (그리드의 영역을 지정할 때 라인을 번호를 기준으로 한다.)
+        7. gap grid 안에 셀과 셀 사이의 여백 
+        8. grid-area 그리드 라인으로 둘러싸인 영역으로 셀들이 모인 하나의 그룹 추후에 네이밍으로 그룹화 할 수 있다. 
+        */
+
+        div.container{
+            display: grid;
+            background-color: coral;
+            padding: 15px;
+            /*grid-template-columns: 200px 300px 100px; 가로로 트랙의 크기를 지정해 주겠다.*/
+            /*grid-template-columns: 2fr 1fr 1fr; fr > 조각이라는 뜻. 비율로서 나누겠다.*/
+            /* grid-template-columns: 1fr 300px 1fr 200px; 섞어서 쓸 수도 있다.*/
+            grid-template-columns: repeat(2, 1fr 300px); /*1fr 300px을 두 번 반복해주겠다는 뜻*/
+            grid-template-rows: 300px 500px 300px;
+        }
+
+        div.item{
+            border: solid 2px black;
+            background-color: aliceblue;
+        }
+
+        /*
+        grid의 line 크기를 지정해주는 속성
+        -grid-template-columns: 200px 300px 100px; 가로로 트랙의 크기를 지정해 주겠다.
+        -grid-template-rows: 300px 200px 300px; 세로로 트랙의 크기를 지정해 주겠다.
+        -grid-template-area
+        부모요소에 넣어야함. px단위나 fr단위를 사용한다. 혼합으로도 사용이 가능하다. 
+        */
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">item01</div>
+        <div class="item">item02</div>
+        <div class="item">item03</div>
+        <div class="item">item04</div>
+        <div class="item">item05</div>
+        <div class="item">item06</div>
+        <div class="item">item07</div>
+        <div class="item">item08</div>
+        <div class="item">item09</div>
+        <div class="item">item10</div>
+        <div class="item">item11</div>
+        <div class="item">item12</div>
+    </div>
+    
+</body>
+</html>
